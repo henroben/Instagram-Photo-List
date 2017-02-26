@@ -87,10 +87,43 @@ function ipl_options_content() {
 							       id="ipl_settings[access_token]"
 							       type="text"
 							       value="<?php echo $ipl_options['access_token']; ?>"
-							       class="widefat"
+							       class="widefat access-token"
 							>
 							<p class="description" id="ipl_settings[access_token]">
 								<?php _e('Get this from the URL after Authentication', 'ipl-domain'); ?>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">
+							<label for="ipl_settings[linked]">
+								<?php _e('Link Photos to Instagram', 'ipl-domain'); ?>
+							</label>
+						</th>
+						<td>
+							<input name="ipl_settings[linked]"
+							       id="ipl_settings[linked]"
+							       type="checkbox"
+							       value="1"
+								   <?php checked(1, !empty($ipl_options['linked'])); ?>
+							>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">
+							<label for="ipl_settings[page_caption]">
+								<?php _e('Page Caption', 'ipl-domain'); ?>
+							</label>
+						</th>
+						<td>
+							<input name="ipl_settings[page_caption]"
+							       id="ipl_settings[page_caption]"
+							       type="text"
+							       value="<?php echo $ipl_options['page_caption']; ?>"
+							       class="widefat"
+							>
+							<p class="description" id="ipl_settings[page_caption]">
+								<?php _e('Add some text to the top of the page', 'ipl-domain'); ?>
 							</p>
 						</td>
 					</tr>
